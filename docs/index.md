@@ -1,35 +1,45 @@
 ## Summary
 
-Replace this paragraph with one or more paragraphs summarizing the purpose and operation of the Android app you propose to develop in this project.
-
+_GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able visualize this data with various charts and graphs.
+ 
 ## Intended users
 
-Write a bullet list here, including at least 2 different types of intended users. Make it reasonably specific; simply saying "Anyone who likes games" (for example) is not sufficiently specific.
+- A college student that is looking to budget appropriately for the semester.
 
-For each type of intended user, include at least 1 _user story_. A user story is usually just 1 simple sentence (no more than 2 sentences), in the voice of the intended user, stating a specific task that the user performs using the app, and the benefit that will be obtained. The simplest user stories take the form 
+  > As a new college student just learning to manage my own budget, it would be nice to have the ability to enter my finances for the month and have them organized in a simple yet effecient way that allows me to understand my spending habits. 
 
-> As a <type of intended user (_who_)> I want to <use of feature or functionality (_what_)> so that <benefit (_why_).
+- Individuals who are looking to understand their spending habits.
 
-Please avoid writing too much for the user story. In particular, if the way the user story is written makes it difficult to see the _who_, _what_, and _why_, then you probably need to re-write it more directly. (On the other hand, a user story should not simply be a re-statement of the intended user description.)
+  > As someone who has always struggled having enough money at the end of the month, I want to be able to understand my spending habits and find out how I can get the most out of my budget. 
 
-Here is one (silly) example of an intended user, along with a user story. Please note not only the conceptual structure, but the Markdown syntax used.
-
-* People who like to use randomness in their decision making.
-
-    > As someone who enjoys randomness in my life, I need an app that lets me flip a virtual coin or roll one or more virtual dice, so that I can base my decisions on randomness, without having to carry coins or dice in my pockets.
 
 ## Functionality
 
-List (using a bullet list---or ordered list, if order is relevant) the key functional aspects that will be provided by the app---i.e. tell us what the user will be able to do using the app. This should not simply be a re-statement of the [summary](#summary), but should instead provide a more specific articulation of the functionality and user experience. 
+- Input of monthly expense including outgoing expenses
+- Date and Time of incoming/outgoing expenses
+- Organization of expenses into different categories (Rent,Utilities, Groceries, Important Bills, Vacations, etc.)
+- Representation of monthly expenses in charts and graphs
+- Simple interface to allow users to quickly understand their budget
+
+
 
 ## Persistent data
 
-List, in general terms and using a bullet list, what content will be stored on the Android device. This should include any information that users of your app would expect to be maintained (i.e. without connection to a server) across multiple sessions of use. 
-    
+- Monthly expenses
+- Current cash flow
+- Past monthly expenses
+- Recent Entries
+- Past Selections
+- Names and categories
+
 ## Device/external services
 
-If the client component will need to access special services of the device (e.g. sensors, contacts, messaging), list them here using a bullet list. Also, if the client component will need to access already-existing external services (e.g. real-time weather data, Open Movie Database, Open Trivia Database), those should also be listed here; any such references to external services should include links to the main page or API description page for the service.
+- Date and Time
+
 
 ## Stretch goals/possible enhancements 
 
-If you can identify functional elements of the software that you think might not be achievable in the scope of the project, but which would nonetheless add significant value if you were able to include them, list them here. For now, we recommend listing them in order of complexity/amount of work, from the least to the most.
+- Import account information from already existing spending trackers.
+- Import information from bank accounts to have up-to-date spending records.
+- Import current credit score 
+

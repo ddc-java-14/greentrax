@@ -1,3 +1,3 @@
-# Android project proposal starter
+# Expense Tracker
 
-This is a project template for all phases&mdash;from proposal to final delivery&mdash;of the personal Android project in the [Deep Dive Coding](https://deepdivecoding.com/) [Java + Android bootcamp](https://deepdivecoding.com/java-android/).
+My proposed app will be named 'GreenTrax' which will be an app that is able to track monthly expenses coming in and going out while visualizing this data with various charts and graphs. It will be able to automate the process of recording transactions, total expenses by category, and track progress toward goals. This app will help the user be able to identify and eliminate wasteful spending habits in their lives.
