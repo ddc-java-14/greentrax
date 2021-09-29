@@ -6,11 +6,11 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 - A college student that is looking to budget appropriately for the semester.
 
-  > As a new college student just learning to manage my own budget, it would be nice to have the ability to enter my finances for the month and have them organized in a simple yet effecient way that allows me to understand my spending habits. 
+  > As a new college student just learning to manage my own budget, it would be nice to have the ability to enter my finances for the month and have them organized in a simple yet efficient way that allows me to understand my spending habits. 
 
 - Individuals who are looking to understand their spending habits.
 
-  > As someone who has always struggled having enough money at the end of the month, I want to be able to understand my spending habits and find out how I can get the most out of my budget. 
+  > As someone who has always struggled having enough money at the end of the month, being able to record my expenses and having them organized in an understandable way would help me trim my budget.  
 
 
 ## Functionality
@@ -34,7 +34,8 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 ## Device/external services
 
-- Date and Time
+-Take a photo to upload receipts/bills for easy recording.
+-Use Google Sign In to identify Current User
 
 
 ## Stretch goals/possible enhancements 
@@ -42,4 +43,5 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 - Import account information from already existing spending trackers.
 - Import information from bank accounts to have up-to-date spending records.
 - Import current credit score 
+- Supporting multiple users on the same device
 
