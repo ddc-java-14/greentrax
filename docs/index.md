@@ -1,6 +1,6 @@
 ## Summary
 
-_GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able visualize this data with various charts and graphs.
+_GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able to visualize this data with various charts and graphs.
  
 ## Intended users
 
@@ -34,8 +34,9 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 ## Device/external services
 
--Take a photo to upload receipts/bills for easy recording.
--Use Google Sign In to identify Current User
+- Take a photo to upload receipts/bills for easy recording.
+- Use Google Sign In to identify current user.
+
 
 
 ## Stretch goals/possible enhancements 
