@@ -10,7 +10,7 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 - Individuals who are looking to understand their spending habits.
 
-  > As someone who has always struggled having enough money at the end of the month, being able to record my expenses and having them organized in an understandable way would help me trim my budget.  
+  > As someone who has always struggled with having enough money at the end of the month, being able to record my expenses and having them organized in an understandable way would help me trim my budget.  
 
 
 ## Functionality
