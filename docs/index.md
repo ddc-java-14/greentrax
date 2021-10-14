@@ -1,31 +1,17 @@
+---
+title: Overview page
+description: Project summary, documentation, intend user.
+menu: Overview
+order: 0
+---
+
+
 ## Summary
 
 _GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able to visualize this data with various charts and graphs.
 
----
-
-## Design Documentation:
 
 
-
-## Entity Relations Diagram 
-App entities, attributes, and relationships.
-
-
-
-[![ERD](images/greentrax-erd.svg)](pdf/greentrax-erd.pdf)
-
----
-
-
-## Wireframe Diagram
-High-level view of user interaction & flow.
-
-
-
-[![Wireframe Diagram](images/greentrax-wireframe.svg)](pdf/greentrax-wireframe.pdf)
-
----
 
 ## Intended users
 
