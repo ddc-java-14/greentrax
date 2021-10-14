@@ -4,20 +4,24 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 ---
 
-## Entity Relations Diagram 
-App entities, attributes, and relationships.
+##Design Documentation
 
 ---
+
+### Entity Relations Diagram 
+App entities, attributes, and relationships.
+
+
 
 [![ERD](images/greentrax-erd.svg)](pdf/greentrax-erd.pdf)
 
 
-___
 
-## Wireframe Diagram
+
+### Wireframe Diagram
 High-level view of user interaction & flow.
 
-___
+
 
 [![Wireframe Diagram](images/greentrax-wireframe.svg)](pdf/greentrax-wireframe.pdf)
 
