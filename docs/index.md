@@ -1,21 +1,19 @@
----
-title: Wireframe Diagram
-description: High-level view of user interaction & flow.
-menu: Wireframe
-order: 10
----
+
+## Wireframe Diagram
+High-level view of user interaction & flow.
+
 
 [![Wireframe Diagram](images/greentrax-wireframe.svg)](pdf/greentrax-wireframe.pdf)
 
 ---
-title: Entity Relations Diagram
-description: App entities, attributes, and relationships.
-menu: ERD
-order: 10
+## Entity Relations Diagram 
+App entities, attributes, and relationships.
+
 ---
 
 [![ERD](images/greentrax-erd.svg)](pdf/greentrax-erd.pdf)
 
+---
 
 ## Summary
 
