@@ -1,6 +1,6 @@
 ---
 title: Entity Relations Diagram
-description: High-level view of user interaction & flow.
+description: App entities, attributes, and relationships.
 menu: ERD
 order: 10
 ---
