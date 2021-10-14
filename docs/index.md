@@ -6,7 +6,7 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 ## Design Documentation
 
----
+
 
 ### Entity Relations Diagram 
 App entities, attributes, and relationships.
