@@ -1,11 +1,9 @@
+## Summary
 
-## Wireframe Diagram
-High-level view of user interaction & flow.
-
-
-[![Wireframe Diagram](images/greentrax-wireframe.svg)](pdf/greentrax-wireframe.pdf)
+_GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able to visualize this data with various charts and graphs.
 
 ---
+
 ## Entity Relations Diagram 
 App entities, attributes, and relationships.
 
@@ -13,12 +11,18 @@ App entities, attributes, and relationships.
 
 [![ERD](images/greentrax-erd.svg)](pdf/greentrax-erd.pdf)
 
+
+___
+
+## Wireframe Diagram
+High-level view of user interaction & flow.
+
+___
+
+[![Wireframe Diagram](images/greentrax-wireframe.svg)](pdf/greentrax-wireframe.pdf)
+
 ---
 
-## Summary
-
-_GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able to visualize this data with various charts and graphs.
- 
 ## Intended users
 
 - A college student that is looking to budget appropriately for the semester.
