@@ -45,15 +45,20 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 ## Device/external services
 
-- Take a photo to upload receipts/bills for easy recording.
+- Take a photo to upload receipts/bills for easy recording. The Camera API seems promising.
+  - https://developer.android.com/guide/topics/media/camera
+  - This feature is an added convenience and the app will be fully functional without this feature. 
+- Import information from bank accounts to have up-to-date spending records. The Plaid API gives this ability.
+  - https://plaid.com/docs/api/
+  - This is another feature for added convenience as the user will still be able to manually input all this information if desired. 
 - Use Google Sign In to identify current user.
+
 
 
 
 ## Stretch goals/possible enhancements 
 
 - Import account information from already existing spending trackers.
-- Import information from bank accounts to have up-to-date spending records.
 - Import current credit score 
 - Supporting multiple users on the same device
 
