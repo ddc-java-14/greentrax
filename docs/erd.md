@@ -5,4 +5,4 @@ menu: ERD
 order: 10
 ---
 
-[![ERD](images/greentrax-erd.svg)](pdf/greentrax-erd.pdf)
+[![ERD](images/greentrax1.drawio.svg)](pdf/greentrax1.pdf)
