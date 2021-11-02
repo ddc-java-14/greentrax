@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import org.hibernate.annotations.CreationTimestamp;
+
 
 @Entity
 @Table(
@@ -29,10 +29,10 @@ public class Category {
   @Column(nullable = false, updatable = false, columnDefinition = "UUID", unique = true)
   private UUID externalKey = UUID.randomUUID();
 
-  @CreationTimestamp
+
   @Temporal(value = TemporalType.TIMESTAMP)
   @Column(nullable = false, updatable = false)
-  private Date created;
+  private Date created = new Date();
 
   @Column(nullable = false, updatable = true, unique = true, length = 40)
   private String name;

@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import org.hibernate.annotations.CreationTimestamp;
+
 
 @Entity
 @Table(
@@ -30,10 +30,10 @@ public class History {
   @Column(name = "history_id", updatable = false, columnDefinition = "UUID")
   private UUID id;
 
-  @CreationTimestamp
+
   @Temporal(value = TemporalType.TIMESTAMP)
   @Column(nullable = false, updatable = false)
-  private Date created;
+  private Date created = new Date();
 
   @Column(nullable = false, updatable = false, columnDefinition = "UUID", unique = true)
   private UUID externalKey = UUID.randomUUID();

@@ -18,10 +18,10 @@ public class Account {
   @Column(nullable = false, updatable = false, columnDefinition = "UUID", unique = true)
   private UUID externalKey = UUID.randomUUID();
 
-  @CreationTimestamp
+
   @Temporal(value = TemporalType.TIMESTAMP)
   @Column(nullable = false, updatable = false)
-  private Date created;
+  private Date created = new Date();
 
   @Column(nullable = false, updatable = true, unique = true, length = 40)
   private String name;

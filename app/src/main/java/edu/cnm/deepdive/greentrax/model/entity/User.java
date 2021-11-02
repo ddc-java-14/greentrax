@@ -16,7 +16,7 @@ import javax.persistence.OrderBy;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import org.hibernate.annotations.CreationTimestamp;
+
 
 @Entity
 @Table(
@@ -36,10 +36,10 @@ public class User {
   @Column(updatable = false, nullable = false, unique = true, columnDefinition = "UUID")
   private UUID externalKey = UUID.randomUUID();
 
-  @CreationTimestamp
+
   @Temporal(value = TemporalType.TIMESTAMP)
   @Column(nullable = false, updatable = false)
-  private Date created;
+  private Date created = new Date();
 
   @Column(nullable = false, updatable = false, unique = true, length = 30)
   private String oauthKey;
