@@ -19,7 +19,7 @@ import java.util.Date;
 public class User {
 
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "game_id")
+  @ColumnInfo(name = "user_id")
   private long id;
 
   @NonNull

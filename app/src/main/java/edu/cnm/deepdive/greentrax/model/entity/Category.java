@@ -1,38 +1,39 @@
 package edu.cnm.deepdive.greentrax.model.entity;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import java.util.Date;
-import java.util.UUID;
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 
-@Entity
-@Table(
-    name = "category",
-    indexes = {
-        @Index(columnList = "created")
+@Entity(
+    tableName = "category",
+    indices = {
+        @Index(value = {"service_key"}, unique = true)
     }
 )
 public class Category {
 
-  @Id
-  @GeneratedValue
-  @Column(name = "category_id", updatable = false, columnDefinition = "UUID")
-  private UUID id;
+  @PrimaryKey(autoGenerate = true)
+  @ColumnInfo(name = "category_id")
+  private long id;
 
-  @Column(nullable = false, updatable = false, columnDefinition = "UUID", unique = true)
-  private UUID externalKey = UUID.randomUUID();
+  @NonNull
+  @Expose
+  @SerializedName("id")
+  @ColumnInfo(name = "service_key")
+  private String serviceKey;
 
+  @NonNull
+  @Expose
+  @ColumnInfo(index = true)
+  private Date created;
 
-  @Temporal(value = TemporalType.TIMESTAMP)
-  @Column(nullable = false, updatable = false)
-  private Date created = new Date();
 
   @Column(nullable = false, updatable = true, unique = true, length = 40)
   private String name;
@@ -44,39 +45,29 @@ public class Category {
   private Transaction transaction;
 
 
-  public UUID getId() {
+  public long getId() {
     return id;
   }
 
-  public UUID getExternalKey() {
-    return externalKey;
+  public void setId(long id) {
+    this.id = id;
   }
 
+  @NonNull
+  public String getServiceKey() {
+    return serviceKey;
+  }
+
+  public void setServiceKey(@NonNull String serviceKey) {
+    this.serviceKey = serviceKey;
+  }
+
+  @NonNull
   public Date getCreated() {
     return created;
   }
 
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Account getAccount() {
-    return account;
-  }
-
-  public void setAccount(Account account) {
-    this.account = account;
-  }
-
-  public Transaction getTransaction() {
-    return transaction;
-  }
-
-  public void setTransaction(Transaction transaction) {
-    this.transaction = transaction;
+  public void setCreated(@NonNull Date created) {
+    this.created = created;
   }
 }
