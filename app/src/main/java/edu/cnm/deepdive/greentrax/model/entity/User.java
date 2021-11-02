@@ -1,7 +1,12 @@
 package edu.cnm.deepdive.greentrax.model.entity;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,28 +23,28 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 
-@Entity
-@Table(
-    name = "user_profile",
-    indexes = {
-        @Index(columnList = "created")
+@Entity(
+    tableName = "user",
+    indices = {
+        @Index(value = {"service_key"}, unique = true)
     }
 )
-
 public class User {
 
-  @Id
-  @GeneratedValue
-  @Column(name = "user_id", updatable = false, columnDefinition = "UUID")
-  private UUID id;
+  @PrimaryKey(autoGenerate = true)
+  @ColumnInfo(name = "game_id")
+  private long id;
 
-  @Column(updatable = false, nullable = false, unique = true, columnDefinition = "UUID")
-  private final UUID externalKey = UUID.randomUUID();
+  @NonNull
+  @Expose
+  @SerializedName("id")
+  @ColumnInfo(name = "service_key")
+  private String serviceKey;
 
-
-  @Temporal(value = TemporalType.TIMESTAMP)
-  @Column(nullable = false, updatable = false)
-  private final Date created = new Date();
+  @NonNull
+  @Expose
+  @ColumnInfo(index = true)
+  private Date created;
 
   @Column(nullable = false, updatable = false, unique = true, length = 30)
   private String oauthKey;
