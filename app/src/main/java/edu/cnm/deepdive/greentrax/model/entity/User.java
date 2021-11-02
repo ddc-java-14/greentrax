@@ -34,12 +34,12 @@ public class User {
   private UUID id;
 
   @Column(updatable = false, nullable = false, unique = true, columnDefinition = "UUID")
-  private UUID externalKey = UUID.randomUUID();
+  private final UUID externalKey = UUID.randomUUID();
 
 
   @Temporal(value = TemporalType.TIMESTAMP)
   @Column(nullable = false, updatable = false)
-  private Date created = new Date();
+  private final Date created = new Date();
 
   @Column(nullable = false, updatable = false, unique = true, length = 30)
   private String oauthKey;
