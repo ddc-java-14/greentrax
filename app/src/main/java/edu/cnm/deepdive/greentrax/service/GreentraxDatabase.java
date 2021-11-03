@@ -30,8 +30,7 @@ public abstract class GreentraxDatabase extends RoomDatabase {
 
   private static Application context;
 
-  public static void setContext(Application context) {
-    GreentraxDatabase.context = context;
+  public static void setContext(Application context) {GreentraxDatabase.context = context;
   }
 
   public abstract UserDao getUserDao();
