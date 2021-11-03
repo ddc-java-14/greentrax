@@ -7,6 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.greentrax.model.entity.Account;
+import edu.cnm.deepdive.greentrax.model.entity.Budget;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -41,10 +42,7 @@ public interface AccountDao {
   @Delete
   Single<Integer> delete(Collection<Account> accounts);
 
-  @Query("SELECT * FROM account ORDER BY created  DESC")
-  LiveData<List<Account>> selectAll();
-
-  @Query("SELECT * FROM account WHERE account_id = :accountId")
-  LiveData<Account> select(long accountId);
+  @Query("SELECT * FROM budget WHERE budget_id = :budgetId")
+  LiveData<Budget> budgetData(long budgetId);
 
 }

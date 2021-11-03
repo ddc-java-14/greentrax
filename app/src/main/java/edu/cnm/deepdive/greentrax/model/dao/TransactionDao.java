@@ -6,6 +6,8 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+import edu.cnm.deepdive.greentrax.model.entity.Account;
+import edu.cnm.deepdive.greentrax.model.entity.Budget;
 import edu.cnm.deepdive.greentrax.model.entity.Transaction;
 import io.reactivex.Single;
 import java.util.Collection;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @Dao
 public interface TransactionDao {
+
   @Insert
   Single<Long> insert(Transaction transaction);
 
@@ -40,9 +43,10 @@ public interface TransactionDao {
   @Delete
   Single<Integer> delete(Collection<Transaction> transactions);
 
-  @Query("SELECT * FROM transaction ORDER BY created  DESC")
-  LiveData<List<Transaction>> selectAll();
+  @Query("SELECT * FROM account WHERE account_id = :accountId")
+  LiveData<Account> accountData(long accountId);
 
-  @Query("SELECT * FROM transaction WHERE transaction_id = :transactionId")
-  LiveData<Transaction> select(long transactionId);
+  @Query("SELECT * FROM budget WHERE budget_id = :budgetId")
+  LiveData<Budget> budgetData(long budgetId);
+
 }
