@@ -21,6 +21,10 @@ public class Account {
   @ColumnInfo(name = "account_id")
   private long id;
 
+  @ColumnInfo(name = "transaction_id", index = true)
+  private long transactionId;
+
+
   @ColumnInfo(name = "budget_id", index = true)
   private long budgetId;
 
@@ -74,6 +78,13 @@ public class Account {
     this.created = created;
   }
 
+  public long getTransactionId() {
+    return transactionId;
+  }
+
+  public void setTransactionId(long transactionId) {
+    this.transactionId = transactionId;
+  }
 
   public long getBudgetId() {
     return budgetId;

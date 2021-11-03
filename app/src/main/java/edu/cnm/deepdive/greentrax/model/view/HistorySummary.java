@@ -2,10 +2,10 @@ package edu.cnm.deepdive.greentrax.model.view;
 
 import androidx.room.ColumnInfo;
 import androidx.room.DatabaseView;
-import edu.cnm.deepdive.greentrax.model.entity.Account;
+import edu.cnm.deepdive.greentrax.model.entity.History;
 
-@DatabaseView(value = AccountSummary.QUERY, viewName = "account_summary")
-  public class AccountSummary extends Account {
+@DatabaseView(value = HistorySummary.QUERY, viewName = "account_summary")
+  public class HistorySummary extends History {
 
     //this is our query to our data base to show Game summaries
     static final String QUERY = "SELECT \n"

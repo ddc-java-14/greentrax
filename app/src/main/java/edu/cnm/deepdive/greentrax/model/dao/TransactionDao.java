@@ -46,7 +46,4 @@ public interface TransactionDao {
   @Query("SELECT * FROM account WHERE account_id = :accountId")
   LiveData<Account> accountData(long accountId);
 
-  @Query("SELECT * FROM budget WHERE budget_id = :budgetId")
-  LiveData<Budget> budgetData(long budgetId);
-
 }

@@ -16,12 +16,13 @@ import edu.cnm.deepdive.greentrax.model.entity.Budget;
 import edu.cnm.deepdive.greentrax.model.entity.History;
 import edu.cnm.deepdive.greentrax.model.entity.Transaction;
 import edu.cnm.deepdive.greentrax.model.entity.User;
+import edu.cnm.deepdive.greentrax.model.view.HistorySummary;
 import edu.cnm.deepdive.greentrax.service.GreentraxDatabase.Converters;
 import java.util.Date;
 
 @Database(
     entities = {User.class, History.class, Account.class, Transaction.class, Budget.class},
-    views = {},
+    views = {HistorySummary.class},
     version = 1,
     exportSchema = true
 )

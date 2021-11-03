@@ -22,6 +22,9 @@ public class User {
   @ColumnInfo(name = "user_id")
   private long id;
 
+  @ColumnInfo(name = "account_id", index = true)
+  private long accountId;
+
   @NonNull
   @Expose
   @SerializedName("id")
@@ -39,6 +42,14 @@ public class User {
 
   public void setId(long id) {
     this.id = id;
+  }
+
+  public long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(long accountId) {
+    this.accountId = accountId;
   }
 
   @NonNull

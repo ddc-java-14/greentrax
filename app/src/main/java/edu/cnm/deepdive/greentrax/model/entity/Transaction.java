@@ -21,12 +21,6 @@ public class Transaction {
   @ColumnInfo(name = "transaction_id")
   private long id;
 
-  @ColumnInfo(name = "budget_id", index = true)
-  private long budgetId;
-
-  @ColumnInfo(name = "account_id", index = true)
-  private long accountId;
-
   @NonNull
   @Expose
   @SerializedName("id")
@@ -76,22 +70,6 @@ public class Transaction {
 
   public void setCreated(@NonNull Date created) {
     this.created = created;
-  }
-
-  public long getBudgetId() {
-    return budgetId;
-  }
-
-  public void setBudgetId(long budgetId) {
-    this.budgetId = budgetId;
-  }
-
-  public long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(long accountId) {
-    this.accountId = accountId;
   }
 
   @NonNull
