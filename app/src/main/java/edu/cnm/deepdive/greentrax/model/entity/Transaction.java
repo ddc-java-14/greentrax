@@ -40,7 +40,7 @@ public class Transaction {
   private Account account;
 
   @Column(name = "category_id", nullable = false, updatable = false)
-  private Category category;
+  private Budget budget;
 
   @Column(nullable = false, updatable = false, length = 2000)
   private String note;

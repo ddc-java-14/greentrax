@@ -38,7 +38,7 @@ public class Account {
   private String name;
 
   @Column(name = "category_id", nullable = false, updatable = false)
-  private Category category;
+  private Budget budget;
 
   @Column(name = "transaction_id", nullable = false, updatable = false)
   private Transaction transaction;

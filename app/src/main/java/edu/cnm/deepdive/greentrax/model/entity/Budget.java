@@ -17,7 +17,7 @@ import javax.persistence.Column;
         @Index(value = {"service_key"}, unique = true)
     }
 )
-public class Category {
+public class Budget {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "category_id")
