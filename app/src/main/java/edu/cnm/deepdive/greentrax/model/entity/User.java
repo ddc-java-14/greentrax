@@ -33,7 +33,6 @@ public class User {
   @ColumnInfo(index = true)
   private Date created;
 
-
   public long getId() {
     return id;
   }

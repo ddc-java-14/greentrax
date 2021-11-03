@@ -22,6 +22,12 @@ public class Transaction {
   @ColumnInfo(name = "transaction_id")
   private long id;
 
+  @ColumnInfo(name = "budget_id", index = true)
+  private long budgetId;
+
+  @ColumnInfo(name = "account_id", index = true)
+  private long accountId;
+
   @NonNull
   @Expose
   @SerializedName("id")
@@ -33,23 +39,19 @@ public class Transaction {
   @ColumnInfo(index = true)
   private Date created;
 
-  @Column(nullable = false, updatable = true, unique = true, length = 40)
+  @NonNull
+  @Expose
   private String name;
 
-  @Column(name = "account_id", nullable = false, updatable = false)
-  private Account account;
+  @NonNull
+  @Expose
+  private Long amount;
 
-  @Column(name = "category_id", nullable = false, updatable = false)
-  private Budget budget;
-
-  @Column(nullable = false, updatable = false, length = 2000)
+  @NonNull
+  @Expose
   private String note;
 
-  @Column(nullable = false, updatable = false, length = 100)
-  private String amount;
 
-  @Column(nullable = false, updatable = false, length = 100)
-  private String type;
 
   public long getId() {
     return id;
@@ -75,5 +77,48 @@ public class Transaction {
 
   public void setCreated(@NonNull Date created) {
     this.created = created;
+  }
+
+  public long getBudgetId() {
+    return budgetId;
+  }
+
+  public void setBudgetId(long budgetId) {
+    this.budgetId = budgetId;
+  }
+
+  public long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(long accountId) {
+    this.accountId = accountId;
+  }
+
+  @NonNull
+  public String getName() {
+    return name;
+  }
+
+  public void setName(@NonNull String name) {
+    this.name = name;
+  }
+
+  @NonNull
+  public Long getAmount() {
+    return amount;
+  }
+
+  public void setAmount(@NonNull Long amount) {
+    this.amount = amount;
+  }
+
+  @NonNull
+  public String getNote() {
+    return note;
+  }
+
+  public void setNote(@NonNull String note) {
+    this.note = note;
   }
 }

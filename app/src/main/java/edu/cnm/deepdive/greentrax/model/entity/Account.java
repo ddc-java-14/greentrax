@@ -22,6 +22,10 @@ public class Account {
   @ColumnInfo(name = "account_id")
   private long id;
 
+  @ColumnInfo(name = "budget_id", index = true)
+  private long budgetId;
+
+
   @NonNull
   @Expose
   @SerializedName("id")
@@ -34,14 +38,15 @@ public class Account {
   private Date created;
 
 
-  @Column(nullable = false, updatable = true, unique = true, length = 40)
+  @NonNull
+  @Expose
   private String name;
 
-  @Column(name = "category_id", nullable = false, updatable = false)
-  private Budget budget;
+  @NonNull
+  @Expose
+  private String type;
 
-  @Column(name = "transaction_id", nullable = false, updatable = false)
-  private Transaction transaction;
+
 
 
   public long getId() {
@@ -68,5 +73,32 @@ public class Account {
 
   public void setCreated(@NonNull Date created) {
     this.created = created;
+  }
+
+
+  public long getBudgetId() {
+    return budgetId;
+  }
+
+  public void setBudgetId(long budgetId) {
+    this.budgetId = budgetId;
+  }
+
+  @NonNull
+  public String getName() {
+    return name;
+  }
+
+  public void setName(@NonNull String name) {
+    this.name = name;
+  }
+
+  @NonNull
+  public String getType() {
+    return type;
+  }
+
+  public void setType(@NonNull String type) {
+    this.type = type;
   }
 }

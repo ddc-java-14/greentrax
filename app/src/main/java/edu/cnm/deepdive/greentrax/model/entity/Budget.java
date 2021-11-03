@@ -12,7 +12,7 @@ import javax.persistence.Column;
 
 
 @Entity(
-    tableName = "category",
+    tableName = "budget",
     indices = {
         @Index(value = {"service_key"}, unique = true)
     }
@@ -20,8 +20,14 @@ import javax.persistence.Column;
 public class Budget {
 
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "category_id")
+  @ColumnInfo(name = "budget_id")
   private long id;
+
+  @ColumnInfo(name = "account_id", index = true)
+  private long accountId;
+
+  @ColumnInfo(name = "transaction_id", index = true)
+  private long transactionId;
 
   @NonNull
   @Expose
@@ -35,14 +41,13 @@ public class Budget {
   private Date created;
 
 
-  @Column(nullable = false, updatable = true, unique = true, length = 40)
-  private String name;
+  @NonNull
+  @Expose
+  private Long amount;
 
-  @Column(name = "account_id", nullable = false, updatable = false)
-  private Account account;
-
-  @Column(name = "transaction_id", nullable = false, updatable = false)
-  private Transaction transaction;
+  @NonNull
+  @Expose
+  private String type;
 
 
   public long getId() {
@@ -69,5 +74,39 @@ public class Budget {
 
   public void setCreated(@NonNull Date created) {
     this.created = created;
+  }
+
+  public long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(long accountId) {
+    this.accountId = accountId;
+  }
+
+  public long getTransactionId() {
+    return transactionId;
+  }
+
+  public void setTransactionId(long transactionId) {
+    this.transactionId = transactionId;
+  }
+
+  @NonNull
+  public Long getAmount() {
+    return amount;
+  }
+
+  public void setAmount(@NonNull Long amount) {
+    this.amount = amount;
+  }
+
+  @NonNull
+  public String getType() {
+    return type;
+  }
+
+  public void setType(@NonNull String type) {
+    this.type = type;
   }
 }

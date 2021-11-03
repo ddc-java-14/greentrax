@@ -22,6 +22,19 @@ public class History {
   @ColumnInfo(name = "history_id")
   private long id;
 
+
+  @ColumnInfo(name = "user_id", index = true)
+  private long userId;
+
+  @ColumnInfo(name = "account_id", index = true)
+  private long accountId;
+
+  @ColumnInfo(name = "transaction_id", index = true)
+  private long transactionId;
+
+  @ColumnInfo(name = "budget_id", index = true)
+  private long budgetId;
+
   @NonNull
   @Expose
   @SerializedName("id")
@@ -58,5 +71,37 @@ public class History {
 
   public void setCreated(@NonNull Date created) {
     this.created = created;
+  }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
+
+  public long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(long accountId) {
+    this.accountId = accountId;
+  }
+
+  public long getTransactionId() {
+    return transactionId;
+  }
+
+  public void setTransactionId(long transactionId) {
+    this.transactionId = transactionId;
+  }
+
+  public long getBudgetId() {
+    return budgetId;
+  }
+
+  public void setBudgetId(long budgetId) {
+    this.budgetId = budgetId;
   }
 }
