@@ -3,6 +3,7 @@ package edu.cnm.deepdive.greentrax.model.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
@@ -13,13 +14,35 @@ import java.util.Date;
     tableName = "transaction",
     indices = {
         @Index(value = {"service_key"}, unique = true)
+    },
+    foreignKeys = {
+        @ForeignKey(
+            entity = Account.class,
+            parentColumns = {"account_id"},
+            childColumns = {"account_id"},
+            onDelete = ForeignKey.RESTRICT
+        ),
+        @ForeignKey(
+            entity = Budget.class,
+            parentColumns = {"budget_id"},
+            childColumns = {"budget_id"},
+            onDelete = ForeignKey.SET_NULL
+        )
     }
+
 )
 public class Transaction {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "transaction_id")
   private long id;
+
+  @ColumnInfo(name = "account_id", index = true)
+  private long accountId;
+
+  @ColumnInfo(name = "budget_id", index = true)
+  private long budgetId;
+
 
   @NonNull
   @Expose
@@ -36,9 +59,9 @@ public class Transaction {
   @Expose
   private String name;
 
-  @NonNull
+
   @Expose
-  private Long amount;
+  private int amount;
 
   @NonNull
   @Expose
@@ -52,6 +75,22 @@ public class Transaction {
 
   public void setId(long id) {
     this.id = id;
+  }
+
+  public long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(long accountId) {
+    this.accountId = accountId;
+  }
+
+  public long getBudgetId() {
+    return budgetId;
+  }
+
+  public void setBudgetId(long budgetId) {
+    this.budgetId = budgetId;
   }
 
   @NonNull
@@ -81,12 +120,12 @@ public class Transaction {
     this.name = name;
   }
 
-  @NonNull
-  public Long getAmount() {
+
+  public int getAmount() {
     return amount;
   }
 
-  public void setAmount(@NonNull Long amount) {
+  public void setAmount(int amount) {
     this.amount = amount;
   }
 

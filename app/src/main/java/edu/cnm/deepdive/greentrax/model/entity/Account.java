@@ -3,6 +3,7 @@ package edu.cnm.deepdive.greentrax.model.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
@@ -13,6 +14,14 @@ import java.util.Date;
     tableName = "account",
     indices = {
         @Index(value = {"service_key"}, unique = true)
+    },
+    foreignKeys = {
+        @ForeignKey(
+            entity = User.class,
+            parentColumns = {"user_id"},
+            childColumns = {"user_id"},
+            onDelete = ForeignKey.RESTRICT
+        )
     }
 )
 public class Account {
@@ -21,15 +30,11 @@ public class Account {
   @ColumnInfo(name = "account_id")
   private long id;
 
-  @ColumnInfo(name = "transaction_id", index = true)
-  private long transactionId;
+
+  @ColumnInfo(name = "user_id", index = true)
+  private long userId;
 
 
-  @ColumnInfo(name = "budget_id", index = true)
-  private long budgetId;
-
-
-  @NonNull
   @Expose
   @SerializedName("id")
   @ColumnInfo(name = "service_key")
@@ -49,6 +54,10 @@ public class Account {
   @Expose
   private String type;
 
+  @NonNull
+  @Expose
+  private Long amount;
+
 
 
 
@@ -58,6 +67,14 @@ public class Account {
 
   public void setId(long id) {
     this.id = id;
+  }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
   }
 
   @NonNull
@@ -78,22 +95,6 @@ public class Account {
     this.created = created;
   }
 
-  public long getTransactionId() {
-    return transactionId;
-  }
-
-  public void setTransactionId(long transactionId) {
-    this.transactionId = transactionId;
-  }
-
-  public long getBudgetId() {
-    return budgetId;
-  }
-
-  public void setBudgetId(long budgetId) {
-    this.budgetId = budgetId;
-  }
-
   @NonNull
   public String getName() {
     return name;
@@ -110,5 +111,14 @@ public class Account {
 
   public void setType(@NonNull String type) {
     this.type = type;
+  }
+
+  @NonNull
+  public Long getAmount() {
+    return amount;
+  }
+
+  public void setAmount(@NonNull Long amount) {
+    this.amount = amount;
   }
 }

@@ -8,15 +8,12 @@ import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
 import edu.cnm.deepdive.greentrax.model.dao.AccountDao;
 import edu.cnm.deepdive.greentrax.model.dao.BudgetDao;
-import edu.cnm.deepdive.greentrax.model.dao.HistoryDao;
 import edu.cnm.deepdive.greentrax.model.dao.TransactionDao;
 import edu.cnm.deepdive.greentrax.model.dao.UserDao;
 import edu.cnm.deepdive.greentrax.model.entity.Account;
 import edu.cnm.deepdive.greentrax.model.entity.Budget;
-import edu.cnm.deepdive.greentrax.model.entity.History;
 import edu.cnm.deepdive.greentrax.model.entity.Transaction;
 import edu.cnm.deepdive.greentrax.model.entity.User;
-import edu.cnm.deepdive.greentrax.model.view.HistorySummary;
 import edu.cnm.deepdive.greentrax.service.GreentraxDatabase.Converters;
 import java.util.Date;
 

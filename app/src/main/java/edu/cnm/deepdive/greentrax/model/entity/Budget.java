@@ -3,6 +3,7 @@ package edu.cnm.deepdive.greentrax.model.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
@@ -14,7 +15,17 @@ import java.util.Date;
     tableName = "budget",
     indices = {
         @Index(value = {"service_key"}, unique = true)
+    },
+    foreignKeys = {
+        @ForeignKey(
+            entity = Account.class,
+            parentColumns = {"account_id"},
+            childColumns = {"account_id"},
+            onDelete = ForeignKey.RESTRICT
+        )
     }
+
+
 )
 public class Budget {
 
@@ -25,10 +36,7 @@ public class Budget {
   @ColumnInfo(name = "account_id", index = true)
   private long accountId;
 
-  @ColumnInfo(name = "transaction_id", index = true)
-  private long transactionId;
 
-  @NonNull
   @Expose
   @SerializedName("id")
   @ColumnInfo(name = "service_key")
@@ -40,9 +48,9 @@ public class Budget {
   private Date created;
 
 
-  @NonNull
+
   @Expose
-  private Long amount;
+  private int amount;
 
   @NonNull
   @Expose
@@ -57,12 +65,12 @@ public class Budget {
     this.id = id;
   }
 
-  @NonNull
+
   public String getServiceKey() {
     return serviceKey;
   }
 
-  public void setServiceKey(@NonNull String serviceKey) {
+  public void setServiceKey(String serviceKey) {
     this.serviceKey = serviceKey;
   }
 
@@ -83,20 +91,13 @@ public class Budget {
     this.accountId = accountId;
   }
 
-  public long getTransactionId() {
-    return transactionId;
-  }
 
-  public void setTransactionId(long transactionId) {
-    this.transactionId = transactionId;
-  }
 
-  @NonNull
-  public Long getAmount() {
+  public int getAmount() {
     return amount;
   }
 
-  public void setAmount(@NonNull Long amount) {
+  public void setAmount(int amount) {
     this.amount = amount;
   }
 

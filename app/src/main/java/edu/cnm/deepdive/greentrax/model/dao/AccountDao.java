@@ -42,8 +42,8 @@ public interface AccountDao {
   @Delete
   Single<Integer> delete(Collection<Account> accounts);
 
-  @Query("SELECT * FROM account WHERE account_id = accountId")
-  LiveData<Account> select(long noteId);
+  @Query("SELECT * FROM account WHERE account_id = :accountId")
+  LiveData<Account> select(long accountId);
 
   @Query("SELECT * FROM account ORDER BY created ASC")
   LiveData<List<Account>> select();

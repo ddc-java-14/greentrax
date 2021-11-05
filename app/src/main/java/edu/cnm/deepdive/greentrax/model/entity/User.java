@@ -13,7 +13,8 @@ import java.util.Date;
 @Entity(
     tableName = "user",
     indices = {
-        @Index(value = {"service_key"}, unique = true)
+        @Index(value = {"service_key"}, unique = true),
+        @Index(value = {"oauth_key"}, unique = true)
     }
 )
 public class User {
@@ -22,10 +23,11 @@ public class User {
   @ColumnInfo(name = "user_id")
   private long id;
 
-  @ColumnInfo(name = "account_id", index = true)
-  private long accountId;
-
   @NonNull
+  @ColumnInfo(name = "oauth_key")
+  private String oauthKey;
+
+
   @Expose
   @SerializedName("id")
   @ColumnInfo(name = "service_key")
@@ -44,20 +46,20 @@ public class User {
     this.id = id;
   }
 
-  public long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(long accountId) {
-    this.accountId = accountId;
-  }
-
   @NonNull
+  public String getOauthKey() {
+    return oauthKey;
+  }
+
+  public void setOauthKey(@NonNull String oauthKey) {
+    this.oauthKey = oauthKey;
+  }
+
   public String getServiceKey() {
     return serviceKey;
   }
 
-  public void setServiceKey(@NonNull String serviceKey) {
+  public void setServiceKey(String serviceKey) {
     this.serviceKey = serviceKey;
   }
 
@@ -69,5 +71,8 @@ public class User {
   public void setCreated(@NonNull Date created) {
     this.created = created;
   }
+
+
+
 }
 
