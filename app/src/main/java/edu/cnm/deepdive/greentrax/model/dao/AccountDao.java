@@ -7,7 +7,6 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.greentrax.model.entity.Account;
-import edu.cnm.deepdive.greentrax.model.entity.Budget;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
