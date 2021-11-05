@@ -45,7 +45,7 @@ public interface AccountDao {
   @Query("SELECT * FROM account WHERE account_id = :accountId")
   LiveData<Account> select(long accountId);
 
-  @Query("SELECT * FROM account ORDER BY created ASC")
+  @Query("SELECT * FROM account ORDER BY name ASC")
   LiveData<List<Account>> select();
 
 }

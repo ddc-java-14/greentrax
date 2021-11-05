@@ -18,8 +18,8 @@ import edu.cnm.deepdive.greentrax.service.GreentraxDatabase.Converters;
 import java.util.Date;
 
 @Database(
-    entities = {User.class, History.class, Account.class, Transaction.class, Budget.class},
-    views = {HistorySummary.class},
+    entities = {User.class, Account.class, Transaction.class, Budget.class},
+    views = {Account.class},
     version = 1,
     exportSchema = true
 )
@@ -32,7 +32,6 @@ public abstract class GreentraxDatabase extends RoomDatabase {
   }
 
   public abstract UserDao getUserDao();
-  public abstract HistoryDao getHistoryDao();
   public abstract AccountDao getAccountDao();
   public abstract TransactionDao getTransactionDao();
   public abstract BudgetDao budgetDao();
