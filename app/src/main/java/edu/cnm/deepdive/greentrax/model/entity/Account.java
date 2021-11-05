@@ -56,7 +56,7 @@ public class Account {
 
   @NonNull
   @Expose
-  private Long amount;
+  private int amount;
 
 
 
@@ -114,11 +114,11 @@ public class Account {
   }
 
   @NonNull
-  public Long getAmount() {
+  public int getAmount() {
     return amount;
   }
 
   public void setAmount(@NonNull Long amount) {
-    this.amount = amount;
+    this.amount = Math.toIntExact(amount);
   }
 }
