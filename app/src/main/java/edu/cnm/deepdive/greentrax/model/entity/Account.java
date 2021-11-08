@@ -32,7 +32,7 @@ public class Account {
 
 
   @ColumnInfo(name = "user_id", index = true)
-  private long userId;
+  private Long userId; // FIXME This needs to be a primitive long
 
 
   @Expose
@@ -54,7 +54,7 @@ public class Account {
   @Expose
   private String type;
 
-  @NonNull
+
   @Expose
   private int amount;
 
@@ -69,11 +69,11 @@ public class Account {
     this.id = id;
   }
 
-  public long getUserId() {
+  public Long getUserId() {
     return userId;
   }
 
-  public void setUserId(long userId) {
+  public void setUserId(Long userId) {
     this.userId = userId;
   }
 
@@ -113,12 +113,12 @@ public class Account {
     this.type = type;
   }
 
-  @NonNull
+
   public int getAmount() {
     return amount;
   }
 
-  public void setAmount(@NonNull Long amount) {
+  public void setAmount(int amount) {
     this.amount = Math.toIntExact(amount);
   }
 }

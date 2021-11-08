@@ -11,12 +11,13 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import edu.cnm.deepdive.greentrax.databinding.FragmentAccountBinding;
+import edu.cnm.deepdive.greentrax.databinding.FragmentEditAccountBinding;
 import edu.cnm.deepdive.greentrax.model.entity.Account;
 import edu.cnm.deepdive.greentrax.viewmodel.AccountViewModel;
 
 public class EditAccountFragment extends BottomSheetDialogFragment implements TextWatcher {
 
-  private FragmentAccountBinding binding;
+  private FragmentEditAccountBinding binding;
   private AccountViewModel viewModel;
   private long accountId;
   private Account account;
@@ -24,7 +25,7 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    EditAccountFragment args = EditAccountFragment.fromBundle(getArguments());
+    EditAccountFragmentArgs args = EditAccountFragmentArgs.fromBundle(getArguments());
     accountId = args.getAccountId();
   }
 
@@ -38,13 +39,13 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    binding = FragmentAccountBinding.inflate(inflater, container, false);
-    binding.subject.addTextChangedListener(this);
-    binding.text.addTextChangedListener(this);
+    binding = FragmentEditAccountBinding.inflate(inflater, container, false);
+    binding.name.addTextChangedListener(this);
+    binding.type.addTextChangedListener(this);
     binding.cancel.setOnClickListener((v) -> dismiss());
     binding.save.setOnClickListener((v) -> {
-      account.setName(binding.subject.getText().toString().trim());
-      account.setType(binding.text.getText().toString().trim());
+      account.setName(binding.name.getText().toString().trim());
+      account.setType(binding.type.getText().toString().trim());
       viewModel.save(account);
       dismiss();
     });
@@ -55,8 +56,13 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     viewModel = new ViewModelProvider(this).get(AccountViewModel.class);
-    if (account != null) {
-      // TODO Set noteId in viewModel and observe viewModel.getNote().
+    if (accountId != 0) {
+     viewModel.setAccountId(accountId);
+     viewModel.getAccount().observe(getViewLifecycleOwner(), (account) -> {
+       this.account = account;
+       binding.name.setText(account.getName());
+       binding.type.setText(account.getType());
+     });
     } else {
       account = new Account();
     }
@@ -87,11 +93,11 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
   }
 
   private void checkSubmitConditions() {
-    String subject = binding.subject
+    String subject = binding.name
         .getText()
         .toString()
         .trim();
-    String text = binding.text
+    String text = binding.type
         .getText()
         .toString()
         .trim();

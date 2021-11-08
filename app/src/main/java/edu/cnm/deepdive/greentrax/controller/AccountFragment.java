@@ -32,9 +32,9 @@ public class AccountFragment extends Fragment {
       super.onViewCreated(view, savedInstanceState);
       viewModel = new ViewModelProvider(this).get(AccountViewModel.class);
       viewModel
-          .getAccount()
-          .observe(getViewLifecycleOwner(), (notes) -> {
-            AccountAdapter adapter = new AccountAdapter(getContext(), notes);
+          .getAccounts()
+          .observe(getViewLifecycleOwner(), (accounts) -> {
+            AccountAdapter adapter = new AccountAdapter(getContext(), accounts);
             binding.accounts.setAdapter(adapter);
           });
     }

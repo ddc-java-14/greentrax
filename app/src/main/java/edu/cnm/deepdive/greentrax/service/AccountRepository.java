@@ -17,12 +17,12 @@ public class AccountRepository {
 
   public AccountRepository(Application context) {
     this.context = context;
-    accountDao = GreentraxDatabase
+    accountDao = AccountDatabase
         .getInstance()
         .getAccountDao();
   }
 
-  public LiveData<Account> get(long noteId) {return accountDao.select(noteId);
+  public LiveData<Account> get(long accountId) {return accountDao.select(accountId);
   }
 
   public LiveData<List<Account>> getAll() {

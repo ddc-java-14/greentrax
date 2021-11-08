@@ -13,9 +13,9 @@
     android:theme="@style/Theme.Greentrax"
     tools:ignore="AllowBackup">
     <activity
-      android:label="@string/title_activity_main"
       android:name=".controller.MainActivity"
-      android:theme="@style/Theme.Greentrax.NoActionBar">
+      android:exported="true"
+      android:theme="@style/Theme.Greentrax">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 

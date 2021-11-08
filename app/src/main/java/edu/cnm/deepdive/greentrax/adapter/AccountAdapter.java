@@ -51,9 +51,9 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.Holder> 
     //Taking setText data and putting it in our view object
     private void bind(int position) {
       Account account = accounts.get(position);
-      binding.subject.setText(account.getName());
-      binding.updated.setText(dateFormat.format(account.getType()));
-      binding.text.setText(account.getAmount());
+      binding.name.setText(account.getName());
+      binding.created.setText(dateFormat.format(account.getCreated()));
+      binding.type.setText(account.getType());
     }
   }
 

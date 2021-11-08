@@ -9,38 +9,36 @@
   android:background="?android:selectableItemBackground">
 
   <TextView
-    android:id="@+id/subject"
+    android:id="@+id/name"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_static_spacing"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@id/updated"
+    app:layout_constraintEnd_toStartOf="@id/created"
     style="@style/TextAppearance.MaterialComponents.Headline5"
-    tools:text="This is a subject"/>
+    tools:text="This is an Account"/>
 
   <TextView
-    android:id="@+id/updated"
+    android:id="@+id/created"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_static_spacing"
-    app:layout_constraintBaseline_toBaselineOf="@id/subject"
+    app:layout_constraintBaseline_toBaselineOf="@id/name"
     app:layout_constraintEnd_toEndOf="parent"
     style="@style/TextAppearance.AppCompat.Body1"
     tools:text="11/05/2021"/>
 
   <TextView
-    android:id="@+id/text"
+    android:id="@+id/type"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_static_spacing"
-    app:layout_constraintTop_toBottomOf="@id/subject"
+    app:layout_constraintTop_toBottomOf="@id/name"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     style="@style/TextAppearance.AppCompat.Body1"
-    android:maxLines="3"
-    android:ellipsize="end"
-    tools:text="Lorem nipsum dolor sit amet, consectetur adipiscing elit. Ut ipsum diam, auctor non dui nec, tristique tempor felis. Donec nec ante tempus, placerat magna dapibus, suscipit velit. In lacinia sagittis arcu vel semper. Mauris eu sagittis leo. Pellentesque eget turpis eu neque tempus pharetra. Aenean in scelerisque diam. Nunc sed aliquam urna, quis mollis est. Etiam iaculis congue lectus, in pulvinar leo eleifend tincidunt. In sed sem sed augue imperdiet pretium. Aliquam ac mollis arcu, luctus laoreet arcu. Proin nulla mi, varius nec ipsum sed, vehicula eleifend eros."
+    tools:text="This is an account type"
 
 
     />
