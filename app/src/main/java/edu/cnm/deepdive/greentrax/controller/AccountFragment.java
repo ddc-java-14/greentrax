@@ -6,41 +6,43 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-import edu.cnm.deepdive.greentrax.R;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
+import edu.cnm.deepdive.greentrax.adapter.AccountAdapter;
 import edu.cnm.deepdive.greentrax.databinding.FragmentAccountBinding;
+import edu.cnm.deepdive.greentrax.viewmodel.AccountViewModel;
 
 public class AccountFragment extends Fragment {
 
-  private FragmentAccountBinding binding;
+    private FragmentAccountBinding binding;
+    private AccountViewModel viewModel;
 
-  @Override
-  public View onCreateView(
-      LayoutInflater inflater, ViewGroup container,
-      Bundle savedInstanceState
-  ) {
+    @Override
+    public View onCreateView(
+        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+      binding = FragmentAccountBinding.inflate(inflater, container, false);
+      binding.addAccount.setOnClickListener((v) -> Navigation
+          .findNavController(binding.getRoot())
+          .navigate(AccountFragmentDirections.openAccount()));
+      return binding.getRoot();
 
-    binding = FragmentAccountBinding.inflate(inflater, container, false);
-    return binding.getRoot();
+    }
+
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+      super.onViewCreated(view, savedInstanceState);
+      viewModel = new ViewModelProvider(this).get(AccountViewModel.class);
+      viewModel
+          .getAccount()
+          .observe(getViewLifecycleOwner(), (notes) -> {
+            AccountAdapter adapter = new AccountAdapter(getContext(), notes);
+            binding.accounts.setAdapter(adapter);
+          });
+    }
+
+    @Override
+    public void onDestroyView() {
+      super.onDestroyView();
+      binding = null;
+    }
 
   }
-
-  public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-    super.onViewCreated(view, savedInstanceState);
-
-    binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        NavHostFragment.findNavController(AccountFragment.this)
-            .navigate(R.id.action_FirstFragment_to_SecondFragment);
-      }
-    });
-  }
-
-  @Override
-  public void onDestroyView() {
-    super.onDestroyView();
-    binding = null;
-  }
-
-}

@@ -28,6 +28,13 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
     accountId = args.getAccountId();
   }
 
+  private static EditAccountFragment fromBundle(Bundle arguments) {
+    return null;
+  }
+  private int getAccountId() {
+    return 0;
+  }
+
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
@@ -36,8 +43,8 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
     binding.text.addTextChangedListener(this);
     binding.cancel.setOnClickListener((v) -> dismiss());
     binding.save.setOnClickListener((v) -> {
-      account.setSubject(binding.subject.getText().toString().trim());
-      account.setText(binding.text.getText().toString().trim());
+      account.setName(binding.subject.getText().toString().trim());
+      account.setType(binding.text.getText().toString().trim());
       viewModel.save(account);
       dismiss();
     });
@@ -48,7 +55,7 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     viewModel = new ViewModelProvider(this).get(AccountViewModel.class);
-    if (account != 0) {
+    if (account != null) {
       // TODO Set noteId in viewModel and observe viewModel.getNote().
     } else {
       account = new Account();

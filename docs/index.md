@@ -9,6 +9,10 @@ order: 0
 ## Summary
 
 _GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able to visualize this data with various charts and graphs.
+Initial implementation of this app will allow users to manually input their account info along with transactions and create a budget based off these categories. 
+
+The app will store information about transactions such as time created, type, and will even allow for notes. Users will also receive an easy-to-understand summary of previous spending habits. Stretch goals include adding an API that allows users to connect with their bank accounts along with the addition of a Camera API that will allow a user to take pictures of receipts for easy uploading. 
+
 
 
 
@@ -45,12 +49,6 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 ## Device/external services
 
-- Take a photo to upload receipts/bills for easy recording. The Camera API seems promising.
-  - [Camera API](https://developer.android.com/guide/topics/media/camera)
-  - This feature is an added convenience and the app will be fully functional without this feature. 
-- Import information from bank accounts to have up-to-date spending records. The Plaid API gives this ability.
-  - [Plaid API](https://plaid.com/docs/api/)
-  - This is another feature for added convenience as the user will still be able to manually input all this information if desired. 
 - Use Google Sign In to identify current user.
 
 
@@ -58,7 +56,12 @@ _GreenTrax_ is a simple Android App, intended for use by individuals looking to 
 
 ## Stretch goals/possible enhancements 
 
-- Import account information from already existing spending trackers.
+- Take a photo to upload receipts/bills for easy recording. The Camera API seems promising.
+  - [Camera API](https://developer.android.com/guide/topics/media/camera)
+    - This feature is an added convenience and the app will be fully functional without this feature.
+- Import information from bank accounts to have up-to-date spending records. 
+  - [Plaid API](https://plaid.com/docs/api/) 
+    - This is another feature for added convenience as the user will still be able to manually input all this information if desired.
 - Import current credit score 
 - Supporting multiple users on the same device
 
