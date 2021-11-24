@@ -2,7 +2,7 @@ package edu.cnm.deepdive.greentrax;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
-import edu.cnm.deepdive.greentrax.service.AccountDatabase;
+import edu.cnm.deepdive.greentrax.service.GreenTraxDatabase;
 
 /**
  * Initializes (in the {@link #onCreate()} method) application-level resources. This class
@@ -15,7 +15,7 @@ public class GreenTraxApplication extends Application {
   public void onCreate() {
     super.onCreate();
     Stetho.initializeWithDefaults(this);
-    AccountDatabase.setContext(this);
+    GreenTraxDatabase.setContext(this);
   }
 
 }

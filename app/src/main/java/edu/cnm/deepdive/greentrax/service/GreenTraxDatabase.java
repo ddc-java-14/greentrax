@@ -14,7 +14,7 @@ import edu.cnm.deepdive.greentrax.model.entity.Account;
 import edu.cnm.deepdive.greentrax.model.entity.Budget;
 import edu.cnm.deepdive.greentrax.model.entity.Transaction;
 import edu.cnm.deepdive.greentrax.model.entity.User;
-import edu.cnm.deepdive.greentrax.service.AccountDatabase.Converters;
+import edu.cnm.deepdive.greentrax.service.GreenTraxDatabase.Converters;
 import java.util.Date;
 
 @Database(
@@ -23,12 +23,12 @@ import java.util.Date;
     exportSchema = true
 )
 @TypeConverters({Converters.class})
-public abstract class AccountDatabase extends RoomDatabase {
+public abstract class GreenTraxDatabase extends RoomDatabase {
 
   private static Application context;
 
   public static void setContext(Application context) {
-    AccountDatabase.context = context;
+    GreenTraxDatabase.context = context;
   }
 
   public abstract UserDao getUserDao();
@@ -36,14 +36,14 @@ public abstract class AccountDatabase extends RoomDatabase {
   public abstract TransactionDao getTransactionDao();
   public abstract BudgetDao budgetDao();
 
-  public static AccountDatabase getInstance() {
+  public static GreenTraxDatabase getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
   private static class InstanceHolder {
 
-    private static final AccountDatabase INSTANCE =
-        Room.databaseBuilder(context, AccountDatabase.class, "greentrax-db")
+    private static final GreenTraxDatabase INSTANCE =
+        Room.databaseBuilder(context, GreenTraxDatabase.class, "greentrax-db")
             .build();
 
   }

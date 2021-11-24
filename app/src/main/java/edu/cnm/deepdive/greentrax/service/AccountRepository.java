@@ -17,7 +17,7 @@ public class AccountRepository {
 
   public AccountRepository(Application context) {
     this.context = context;
-    accountDao = AccountDatabase
+    accountDao = GreenTraxDatabase
         .getInstance()
         .getAccountDao();
   }
