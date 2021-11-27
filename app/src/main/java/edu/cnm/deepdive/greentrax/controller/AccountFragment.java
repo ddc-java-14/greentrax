@@ -21,14 +21,16 @@ public class AccountFragment extends Fragment {
     public View onCreateView(
         LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
       binding = FragmentAccountBinding.inflate(inflater, container, false);
-      binding.addAccount.setOnClickListener((v) -> Navigation
-          .findNavController(binding.getRoot())
-          .navigate(AccountFragmentDirections.openAccount()));
+      binding.addAccount.setOnClickListener(this::onClick);
       return binding.getRoot();
 
     }
 
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+  private void onClick(View view) {
+
+  }
+
+  public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
       super.onViewCreated(view, savedInstanceState);
       viewModel = new ViewModelProvider(this).get(AccountViewModel.class);
       viewModel

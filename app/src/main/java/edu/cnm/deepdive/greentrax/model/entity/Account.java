@@ -32,7 +32,7 @@ public class Account {
 
 
   @ColumnInfo(name = "user_id", index = true)
-  private Long userId; // FIXME This needs to be a primitive long
+  private Long userId;
 
 
   @Expose

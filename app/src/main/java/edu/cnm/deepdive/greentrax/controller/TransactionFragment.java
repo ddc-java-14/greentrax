@@ -10,12 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import edu.cnm.deepdive.greentrax.databinding.FragmentAccountBinding;
 import edu.cnm.deepdive.greentrax.databinding.FragmentEditAccountBinding;
 import edu.cnm.deepdive.greentrax.model.entity.Account;
 import edu.cnm.deepdive.greentrax.viewmodel.AccountViewModel;
 
-public class EditAccountFragment extends BottomSheetDialogFragment implements TextWatcher {
+public class TransactionFragment extends BottomSheetDialogFragment implements TextWatcher {
 
   private FragmentEditAccountBinding binding;
   private AccountViewModel viewModel;
@@ -25,11 +24,11 @@ public class EditAccountFragment extends BottomSheetDialogFragment implements Te
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    EditAccountFragmentArgs args = EditAccountFragmentArgs.fromBundle(getArguments());
+    TransactionFragment args = TransactionFragment.fromBundle(getArguments());
     accountId = args.getAccountId();
   }
 
-  private static EditAccountFragment fromBundle(Bundle arguments) {
+  private static TransactionFragment fromBundle(Bundle arguments) {
     return null;
   }
   private int getAccountId() {
