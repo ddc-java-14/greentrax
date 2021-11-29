@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   package="edu.cnm.deepdive.greentrax">
 
@@ -21,6 +22,7 @@
       android:name=".controller.LoginActivity"
       android:exported="true">
 
+
       <intent-filter>
 
         <!-- This element declares that this activity is the default (main) activity -->
@@ -36,6 +38,7 @@
       android:name=".controller.MainActivity"
       android:theme="@style/Theme.Greentrax.NoActionBar">
     </activity>
+
   </application>
 
 

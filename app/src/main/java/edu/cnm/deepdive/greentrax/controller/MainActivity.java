@@ -42,20 +42,20 @@ public class MainActivity extends AppCompatActivity {
     });
     binding = ActivityMainBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
-
-   // setSupportActionBar(binding.appBarMain.toolbar);
-    DrawerLayout drawer = binding.drawerLayout;
-    NavigationView navigationView = binding.navView;
+//
+//   // setSupportActionBar(binding.appBarMain.toolbar);
+//    DrawerLayout drawer = binding.drawerLayout;
+//    NavigationView navigationView = binding.navView;
 
     // Passing each menu ID as a set of Ids because each
     // menu should be considered as top level destinations.
 
     appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_account, R.id.nav_transaction)
-        .setDrawerLayout(drawer)
+//        .setDrawerLayout(drawer)
         .build();
     navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-    NavigationUI.setupWithNavController(navigationView, navController);
+//    NavigationUI.setupWithNavController(navController);
   }
 
   @Override
