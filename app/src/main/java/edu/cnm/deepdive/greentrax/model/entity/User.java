@@ -21,7 +21,7 @@ public class User {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "user_id")
-  private Long id;
+  private long id;
 
   @NonNull
   @ColumnInfo(name = "oauth_key")

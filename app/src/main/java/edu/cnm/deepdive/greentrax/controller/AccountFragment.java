@@ -21,7 +21,7 @@ public class AccountFragment extends Fragment {
     public View onCreateView(
         LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
       binding = FragmentAccountBinding.inflate(inflater, container, false);
-      binding.addAccount.setOnClickListener(this::onClick);
+//      binding.addAccount.setOnClickListener(this::onClick);
       return binding.getRoot();
 
     }
@@ -37,7 +37,7 @@ public class AccountFragment extends Fragment {
           .getAccounts()
           .observe(getViewLifecycleOwner(), (accounts) -> {
             AccountAdapter adapter = new AccountAdapter(getContext(), accounts);
-            binding.accounts.setAdapter(adapter);
+//            binding.accounts.setAdapter(adapter);
           });
     }
 

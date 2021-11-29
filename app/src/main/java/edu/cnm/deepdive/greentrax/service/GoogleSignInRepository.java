@@ -11,7 +11,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
-import edu.cnm.deepdive.greentrax.BuildConfig;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.SingleOnSubscribe;
@@ -48,11 +47,11 @@ public class GoogleSignInRepository {
   public Single<GoogleSignInAccount> refresh() {
     return Single
         .create((SingleOnSubscribe<GoogleSignInAccount>) (emitter) ->
-            client
-                .silentSignIn()
+                client
+                    .silentSignIn()
 //                .addOnSuccessListener(this::logAccount)
-                .addOnSuccessListener(emitter::onSuccess)
-                .addOnFailureListener(emitter::onError)
+                    .addOnSuccessListener(emitter::onSuccess)
+                    .addOnFailureListener(emitter::onError)
         )
         .observeOn(Schedulers.io());
   }
@@ -85,11 +84,11 @@ public class GoogleSignInRepository {
   public Completable signOut() {
     return Completable
         .create((emitter) ->
-            client
-                .signOut()
-                .addOnSuccessListener((ignored) -> emitter.onComplete())
+                client
+                    .signOut()
+                    .addOnSuccessListener((ignored) -> emitter.onComplete())
 //                .addOnCompleteListener((ignored) -> logAccount(null))
-                .addOnFailureListener(emitter :: onError)
+                    .addOnFailureListener(emitter :: onError)
 
         )
         .subscribeOn(Schedulers.io());

@@ -41,7 +41,7 @@
   <string name="nav_header_subtitle">android.studio@android.com</string>
   <string name="nav_header_title">Android Studio</string>
   <string name="nav_header_desc">Navigation Header</string>
-
+  <string name="total_budget_amount">Total Budget Amount: $0</string>
 
 
 </resources>
