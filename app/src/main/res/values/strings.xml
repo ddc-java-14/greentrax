@@ -45,6 +45,9 @@
   <string name="cancel">Cancel</string>
   <string name="save">Save</string>
   <string name="select_budget_item">Select a Budget Item</string>
+  <string name="item_name">Item Name</string>
+  <string name="note">Note</string>
+  <string name="date">Date</string>
 
   <string-array name="items">
     <item>Select Item</item>

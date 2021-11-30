@@ -23,7 +23,6 @@
 
   </com.google.android.material.appbar.AppBarLayout>
 
-
   <include layout="@layout/fragment_account"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
