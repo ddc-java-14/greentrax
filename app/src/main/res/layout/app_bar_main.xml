@@ -18,11 +18,11 @@
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
       android:layout_height="?attr/actionBarSize"
-      android:background="?attr/colorPrimary"/>
+      android:background="#0AA3B6"/>
       app:popupTheme="@style/Theme.GreenTrax.PopupOverlay"/>
 
   </com.google.android.material.appbar.AppBarLayout>
 
-  <include layout="@layout/fragment_account"/>
+  <include layout="@layout/activity_home"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

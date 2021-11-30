@@ -22,11 +22,11 @@
     android:id="@+id/total_budget_amount"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="@string/total_budget_amount"
+    android:text="@string/total_account_amount"
     android:textSize="25sp"
     android:textStyle="bold"
     android:textAlignment="center"
-    android:textColor="@color/black"
+    android:textColor="@color/cancel"
     android:layout_marginTop="5dp"/>
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -44,7 +44,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="bottom|end"
     app:fabSize="normal"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="@color/cancel"
     android:src="@drawable/ic_add"
     android:layout_margin="16dp"/>
 

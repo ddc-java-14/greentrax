@@ -11,6 +11,8 @@ order: 0
 _GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able to visualize in an accessible format.
 Initial implementation of this app will allow users to manually input their account info along with transactions and create a budget based off these categories. 
 
+I chose this particular application because I knew it would be a challenge which definitely lived up to my expectations. 
+
 The app will store information about transactions such as time created, type, and will even allow for notes. Users will also receive an easy-to-understand summary of previous spending habits. Stretch goals include adding an API that allows users to connect with their bank accounts along with the addition of a Camera API that will allow a user to take pictures of receipts for easy uploading. 
 
 

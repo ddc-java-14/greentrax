@@ -6,7 +6,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".controller.AccountFragment">
+  tools:context=".controller.MainActivity">
 
 <RelativeLayout
   android:layout_width="match_parent"
@@ -195,7 +195,8 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="0dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        app:cardBackgroundColor="#F45555">
 
         <LinearLayout
           android:layout_width="wrap_content"
@@ -212,7 +213,7 @@
           <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_budget"
+            android:text="@string/my_account"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textAlignment="center">
@@ -234,7 +235,8 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="0dp"
-        android:background="#fff">
+        android:background="#fff"
+        app:cardBackgroundColor="#FF9800">
 
         <LinearLayout
           android:layout_width="wrap_content"
@@ -273,7 +275,8 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="0dp"
-        android:background="#fff">
+        android:background="#fff"
+        app:cardBackgroundColor="#FFEB3B">
 
         <LinearLayout
           android:layout_width="wrap_content"
@@ -312,7 +315,8 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="0dp"
-        android:background="#fff">
+        android:background="#fff"
+        app:cardBackgroundColor="#4CAF50">
 
         <LinearLayout
           android:layout_width="wrap_content"
@@ -351,7 +355,8 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="0dp"
-        android:background="#fff">
+        android:background="#fff"
+        app:cardBackgroundColor="#3F51B5">
 
         <LinearLayout
           android:layout_width="wrap_content"
@@ -390,7 +395,8 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="0dp"
-        android:background="#fff">
+        android:background="#fff"
+        app:cardBackgroundColor="@color/purple_200">
 
         <LinearLayout
           android:layout_width="wrap_content"

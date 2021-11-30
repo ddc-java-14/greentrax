@@ -44,10 +44,12 @@
   <string name="enter_note">Enter Note...</string>
   <string name="cancel">Cancel</string>
   <string name="save">Save</string>
-  <string name="select_budget_item">Select a Budget Item</string>
+  <string name="select_budget_type">Select a Budget Type</string>
   <string name="item_name">Item Name</string>
   <string name="note">Note</string>
   <string name="date">Date</string>
+  <string name="my_account">My Account</string>
+  <string name="total_account_amount">Please Enter an Amount : $0</string>
 
   <string-array name="items">
     <item>Select Item</item>
