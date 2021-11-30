@@ -17,19 +17,8 @@
   <string name="save_label">Save</string>
   <string name="cancel_label">Cancel</string>
   <string name="title_activity_settings">SettingsActivity</string>
-  <!-- Preference Titles -->
-  <string name="messages_header">Messages</string>
-  <string name="sync_header">Sync</string>
 
-  <!-- Messages Preferences -->
-  <string name="signature_title">Your signature</string>
-  <string name="reply_title">Default reply action</string>
 
-  <!-- Sync Preferences -->
-  <string name="sync_title">Sync email periodically</string>
-  <string name="attachment_title">Download incoming attachments</string>
-  <string name="attachment_summary_on">Automatically download attachments for incoming emails
-  </string>
   <string name="attachment_summary_off">Only download attachments when manually requested</string>
   <string name="login_failure_message">Unable to Sign-In with Provided Credentials</string>
   <string name="sign_out">Sign Out</string>
@@ -42,6 +31,35 @@
   <string name="nav_header_title">Android Studio</string>
   <string name="nav_header_desc">Navigation Header</string>
   <string name="total_budget_amount">Total Budget Amount: $0</string>
+  <string name="zero_dollars">$0</string>
+  <string name="budget">Budget</string>
+  <string name="today">Today</string>
+  <string name="week">Week</string>
+  <string name="month">Month</string>
+  <string name="savings">Savings</string>
+  <string name="my_budget">My Budget</string>
+  <string name="analytics">Analytics</string>
+  <string name="history">History</string>
+  <string name="enter_amount">Enter Amount...</string>
+  <string name="enter_note">Enter Note...</string>
+  <string name="cancel">Cancel</string>
+  <string name="save">Save</string>
+  <string name="select_budget_item">Select a Budget Item</string>
 
+  <string-array name="items">
+    <item>Select Item</item>
+    <item>Transportation</item>
+    <item>Food</item>
+    <item>Rent/Utilities</item>
+    <item>Entertainment</item>
+    <item>Education</item>
+    <item>Charity</item>
+    <item>Apparel</item>
+    <item>Health</item>
+    <item>Personal</item>
+    <item>Other</item>
+
+
+  </string-array>
 
 </resources>

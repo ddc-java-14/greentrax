@@ -2,22 +2,17 @@ package edu.cnm.deepdive.greentrax.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.view.View.OnClickListener;
-import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.ViewModelProvider;
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import edu.cnm.deepdive.greentrax.MobileNavigationDirections;
+import com.google.android.material.navigation.NavigationView;
 import edu.cnm.deepdive.greentrax.R;
 import edu.cnm.deepdive.greentrax.databinding.ActivityMainBinding;
 import edu.cnm.deepdive.greentrax.viewmodel.LoginViewModel;
@@ -54,12 +49,6 @@ public class MainActivity extends AppCompatActivity {
     // Passing each menu ID as a set of Ids because each
     // menu should be considered as top level destinations.
 
-    appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_account, R.id.nav_transaction)
-        .setDrawerLayout(drawer)
-        .build();
-    navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-    NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-    NavigationUI.setupWithNavController(navigationView, navController);
 
 
 

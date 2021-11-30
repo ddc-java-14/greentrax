@@ -2,6 +2,7 @@ package edu.cnm.deepdive.greentrax;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
+import edu.cnm.deepdive.greentrax.service.GoogleSignInRepository;
 import edu.cnm.deepdive.greentrax.service.GreenTraxDatabase;
 
 /**
@@ -16,6 +17,7 @@ public class GreenTraxApplication extends Application {
     super.onCreate();
     Stetho.initializeWithDefaults(this);
     GreenTraxDatabase.setContext(this);
+    GoogleSignInRepository.setContext(this);
   }
 
 }
