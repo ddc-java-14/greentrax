@@ -9,11 +9,11 @@ order: 0
 ## Summary
 
 _GreenTrax_ is a simple Android App, intended for use by individuals looking to track their monthly expenses coming in and going out while being able to visualize in an accessible format.
-Initial implementation of this app will allow users to manually input their account info along with transactions and create a budget based off these categories. 
+Initial implementation of this app will allow users to manually input their budget info along with transactions and create a budget based off these categories. 
 
-I chose this particular application because I knew it would be a challenge which definitely lived up to my expectations. 
+I chose this particular application because I knew it would be a challenge which definitely lived up to my expectations. Learning to properly budget has always been a challenge on its own, so I also had personal stake in the project. Although I'm far from having it up to the functionality I was hoping for I plan to work on it after the milestone and get it up to a finished state. Accessing databases, implementing navigation and UI, utilizing Google Sign-in as well as learning the basics of Java and Android app development are a few of my major takeaways.  
 
-The app will store information about transactions such as time created, type, and will even allow for notes. Users will also receive an easy-to-understand summary of previous spending habits. Stretch goals include adding an API that allows users to connect with their bank accounts along with the addition of a Camera API that will allow a user to take pictures of receipts for easy uploading. 
+The app will store information about budgets such as time created, type, and will even allow for notes. Users will also receive an easy-to-understand summary of previous spending habits. Stretch goals include adding an API that allows users to connect with their bank accounts along with the addition of a Camera API that will allow a user to take pictures of receipts for easy uploading. 
 
 
 
@@ -27,7 +27,7 @@ The app will store information about transactions such as time created, type, an
 
 - Individuals who are looking to understand their spending habits.
 
-  > As someone who has always struggled with having enough money at the end of the month, being able to record my expenses and having them organized in an understandable way would help me trim my budget.  
+  > As a new homeowner, my budget is tighter than it has been in the past. Being able to record my spending habits and having them organized in an understandable way would help me see where my money is going and allow me to eliminate unnecessary expenses.   
 
 
 ## Functionality
