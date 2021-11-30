@@ -5,4 +5,4 @@ menu: Wireframe
 order: 10
 ---
 
-[![Wireframe Diagram](images/greentrax-wireframe.svg)](pdf/greentrax-wireframe.pdf)
+[![Wireframe Diagram](images/greentrax-wireframe-final-draft.svg)](pdf/greentrax-wireframe-final-draft.pdf)
