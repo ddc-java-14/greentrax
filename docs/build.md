@@ -1,7 +1,7 @@
 ---
 title: Build Instructions
 description: Github location & Build Instructions.
-menu: Overview
+menu: Build Instructions
 order: 1
 ---
 
