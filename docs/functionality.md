@@ -17,7 +17,7 @@ The application is still in very basic stages of implementation. At this point a
 - Getting Data to populate in Day, Week, and Month categories
 - Implementation of some sort of analytics to display spending data in Graphs
 - Proper Javadoc Documentation
-- 
+
 
 ## Aesthetic Enhancements
 
