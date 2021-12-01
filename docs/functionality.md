@@ -1,7 +1,7 @@
 ---
 title: Summary of Current State
 description: Current State, Aesthetic Enhancements and Stretch Goals.
-menu: Copyright
+menu: Current State
 order: 25
 ---
 
@@ -16,6 +16,8 @@ The application is still in very basic stages of implementation. At this point a
 - Implementing functional settings with user preferences
 - Getting Data to populate in Day, Week, and Month categories
 - Implementation of some sort of analytics to display spending data in Graphs
+- Proper Javadoc Documentation
+- 
 
 ## Aesthetic Enhancements
 
