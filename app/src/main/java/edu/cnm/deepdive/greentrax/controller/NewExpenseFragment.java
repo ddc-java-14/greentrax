@@ -13,13 +13,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
+import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.greentrax.R;
 import edu.cnm.deepdive.greentrax.databinding.FragmentNewExpenseBinding;
+import edu.cnm.deepdive.greentrax.model.entity.Transaction;
+import edu.cnm.deepdive.greentrax.viewmodel.BudgetViewModel;
 
 public class NewExpenseFragment extends DialogFragment implements TextWatcher {
 
   private FragmentNewExpenseBinding binding;
   private AlertDialog dialog;
+  private BudgetViewModel viewModel;
 
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,13 +42,19 @@ public class NewExpenseFragment extends DialogFragment implements TextWatcher {
         .setNegativeButton(android.R.string.cancel, (d, w) -> {
         })
         .setPositiveButton(getString(R.string.save_label), (d, w) -> {
-          // TODO Save to database
+          Transaction transaction = new Transaction();
+          String amountInput = binding.amount.getText().toString().trim();
+          double amount = Double.parseDouble(amountInput);
+          transaction.setAmount((int) Math.round(amount * 100));
+          transaction.setName((String) binding.category.getSelectedItem());
+          transaction.setNote(binding.note.getText().toString().trim());
+          viewModel.save(transaction);
         })
         .create();
     dialog.setOnShowListener(dialogInterface -> {
       /*TODO check initial field conditions for validity*/
     });
-    return super.onCreateDialog(savedInstanceState);
+    return dialog;
   }
 
   @Nullable
@@ -57,7 +67,8 @@ public class NewExpenseFragment extends DialogFragment implements TextWatcher {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    // TODO Connect to view models
+    viewModel = new ViewModelProvider(this).get(BudgetViewModel.class);
+    // TODO Observe as appropriate
   }
 
   @Override

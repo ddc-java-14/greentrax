@@ -38,13 +38,13 @@ public class Transaction {
   private long id;
 
   @ColumnInfo(name = "account_id", index = true)
-  private long accountId;
+  private Long accountId;
 
   @ColumnInfo(name = "budget_id", index = true)
   private Long budgetId;
 
 
-  @NonNull
+
   @Expose
   @SerializedName("id")
   @ColumnInfo(name = "service_key")
@@ -77,11 +77,11 @@ public class Transaction {
     this.id = id;
   }
 
-  public long getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(long accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
@@ -93,12 +93,12 @@ public class Transaction {
     this.budgetId = budgetId;
   }
 
-  @NonNull
+
   public String getServiceKey() {
     return serviceKey;
   }
 
-  public void setServiceKey(@NonNull String serviceKey) {
+  public void setServiceKey( String serviceKey) {
     this.serviceKey = serviceKey;
   }
 
