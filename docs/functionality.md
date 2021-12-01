@@ -2,7 +2,7 @@
 title: Summary of Current State
 description: Current State, Aesthetic Enhancements and Stretch Goals.
 menu: Current State
-order: 25
+order: 2
 ---
 
 
