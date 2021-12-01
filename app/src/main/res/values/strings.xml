@@ -14,7 +14,6 @@
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="name_hint">Name</string>
   <string name="type_hint">Type of Account</string>
-  <string name="save_label">Save</string>
   <string name="cancel_label">Cancel</string>
   <string name="title_activity_settings">SettingsActivity</string>
 
@@ -44,15 +43,17 @@
   <string name="enter_note">Enter Note...</string>
   <string name="cancel">Cancel</string>
   <string name="save">Save</string>
-  <string name="select_budget_type">Select a Budget Type</string>
+  <string name="spending_category_prompt">Select a Spending Category</string>
   <string name="item_name">Item Name</string>
   <string name="note">Note</string>
   <string name="date">Date</string>
   <string name="my_account">My Account</string>
   <string name="total_account_amount">Please Enter an Amount : $0</string>
+  <string name="new_expense_description">Add a New Expense</string>
+  <string name="new_expense_title">New Expense</string>
+  <string name="save_label">Save</string>
 
-  <string-array name="items">
-    <item>Select Item</item>
+  <string-array name="categories">
     <item>Transportation</item>
     <item>Food</item>
     <item>Rent/Utilities</item>

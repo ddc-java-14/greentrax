@@ -24,7 +24,6 @@ import edu.cnm.deepdive.greentrax.viewmodel.LoginViewModel;
 public class MainActivity extends AppCompatActivity {
 
   private AppBarConfiguration appBarConfiguration;
-  private CardView budgetCardView;
   private LoginViewModel loginViewModel;
   private ActivityMainBinding binding;
   private NavController navController;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.content_main);
 
     loginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
     getLifecycle().addObserver(loginViewModel);
@@ -46,28 +44,14 @@ public class MainActivity extends AppCompatActivity {
     binding = ActivityMainBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
 
-    setSupportActionBar(binding.appBarMain.toolbar);
-    DrawerLayout drawer = binding.drawerLayout;
-    NavigationView navigationView = binding.navView;
+    setSupportActionBar(binding.toolbar);
+    navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
 
-    budgetCardView = findViewById(R.id.budget_card_view);
-    budgetCardView.setOnClickListener(new OnClickListener() {
+    appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home).build();
+    NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
-      @Override
-      public void onClick(View view) {
-        Intent intent = new Intent(MainActivity.this, BudgetActivity.class);
-        startActivity(intent);
-      }
-    });
   }
 
-  @Override
-  public boolean onSupportNavigateUp() {
-    navController = Navigation.findNavController(this,
-        R.id.nav_host_fragment_content_main);
-    return NavigationUI.navigateUp(navController, appBarConfiguration)
-        || super.onSupportNavigateUp();
-  }
 
   @Override
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -92,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
     return true;
   }
 
-
+  @Override
+  public boolean onSupportNavigateUp() {
+    return NavigationUI.navigateUp(navController, appBarConfiguration)
+        || super.onSupportNavigateUp();
+  }
 }
 

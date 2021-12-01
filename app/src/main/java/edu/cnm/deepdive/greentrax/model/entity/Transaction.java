@@ -41,7 +41,7 @@ public class Transaction {
   private long accountId;
 
   @ColumnInfo(name = "budget_id", index = true)
-  private long budgetId;
+  private Long budgetId;
 
 
   @NonNull
@@ -85,11 +85,11 @@ public class Transaction {
     this.accountId = accountId;
   }
 
-  public long getBudgetId() {
+  public Long getBudgetId() {
     return budgetId;
   }
 
-  public void setBudgetId(long budgetId) {
+  public void setBudgetId(Long budgetId) {
     this.budgetId = budgetId;
   }
 

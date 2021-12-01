@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/half_dynamic_spacing">
+
+    <TextView
+      android:id="@+id/category_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="@dimen/half_dynamic_spacing"
+      android:layout_marginTop="@dimen/half_dynamic_spacing"
+      android:text="@string/spending_category_prompt"
+      android:textColor="@color/black"
+      android:textSize="18sp"
+      android:labelFor="@id/category"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+      android:id="@+id/category"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:entries="@array/categories"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/category_label"/>
+
+
+
+
+    <!--      Amount Edit Text-->
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/amount_layout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      app:hintEnabled="true"
+      app:hintAnimationEnabled="true"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/category">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_amount"
+        android:inputType="numberDecimal|numberSigned"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+      <!--Note Edit Text-->
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/note_layout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      app:hintEnabled="true"
+      app:hintAnimationEnabled="true"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/amount_layout">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_note"
+        android:inputType="textMultiLine"
+        android:minLines="1"
+        android:maxLines="3"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
