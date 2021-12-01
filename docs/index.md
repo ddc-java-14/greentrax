@@ -16,9 +16,6 @@ I chose this particular application because I knew it would be a challenge which
 The app will store information about budgets such as time created, type, and will even allow for notes. Users will also receive an easy-to-understand summary of previous spending habits. Stretch goals include adding an API that allows users to connect with their bank accounts along with the addition of a Camera API that will allow a user to take pictures of receipts for easy uploading. 
 
 
-
-
-
 ## Intended users
 
 - A college student that is looking to budget appropriately for the semester.
@@ -29,7 +26,7 @@ The app will store information about budgets such as time created, type, and wil
 
   > As a new homeowner, my budget is tighter than it has been in the past. Being able to record my spending habits and having them organized in an understandable way would help me see where my money is going and allow me to eliminate unnecessary expenses.   
 
-
+  
 ## Functionality
 
 - Input of monthly expense including outgoing expenses
@@ -52,18 +49,8 @@ The app will store information about budgets such as time created, type, and wil
 ## Device/external services
 
 - Use Google Sign In to identify current user.
+  - [Google Sign-In](https://developers.google.com/identity/sign-in/android/start-integrating)
 
 
 
-
-## Stretch goals/possible enhancements 
-
-- Take a photo to upload receipts/bills for easy recording. The Camera API seems promising.
-  - [Camera API](https://developer.android.com/guide/topics/media/camera)
-    - This feature is an added convenience and the app will be fully functional without this feature.
-- Import information from bank accounts to have up-to-date spending records. 
-  - [Plaid API](https://plaid.com/docs/api/) 
-    - This is another feature for added convenience as the user will still be able to manually input all this information if desired.
-- Import current credit score 
-- Supporting multiple users on the same device
 
